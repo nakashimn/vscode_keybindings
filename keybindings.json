@@ -20,6 +20,11 @@
     },
     {
         "key": "ctrl+h ctrl+h",
+        "command": "jupyter.execSelectionInteractive",
+        "when": "editorTextFocus && isWorkspaceTrusted && jupyter.ownsSelection && editorLangId == 'python'"
+    },
+    {
+        "key": "ctrl+h ctrl+h",
         "command": "extension.multiCommand.execute",
         "args": {
             "sequence": [
@@ -27,7 +32,7 @@
                 "cursorDown"
             ],
         },
-        "when": "editorTextFocus && isWorkspaceTrusted && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+        "when": "editorTextFocus && isWorkspaceTrusted && jupyter.ownsSelection && jupyter.interactive.canRestartNotebookKernel && editorLangId == 'python'"
     },
     {
         "key": "ctrl+shift+h",
@@ -828,5 +833,15 @@
         "key": "ctrl+down",
         "command": "list.focusPageDown",
         "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+h ctrl+h",
+        "command": "extension.php-debug.debugEditorContents",
+        "when": "!inDebugMode && editorLangId == 'php'"
+    },
+    {
+        "key": "ctrl+h ctrl+h",
+        "command": "workbench.action.debug.continue",
+        "when": "inDebugMode && editorLangId == 'php'"
     }
 ]
