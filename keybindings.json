@@ -231,6 +231,14 @@
         "key": "ctrl+shift+r a",
         "command": "remote-containers.attachToRunningContainer"
     },
+    {
+        "key": "ctrl+shift+r b",
+        "command": "remote-containers.rebuildContainer"
+    },
+    {
+        "key": "ctrl+shift+r q",
+        "command": "remote-containers.reopenInSSH"
+    },
 
     ////////////////////////////////////////////////////////////////////////////
     // debug
